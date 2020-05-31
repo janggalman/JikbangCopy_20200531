@@ -2,6 +2,8 @@ package kr.tjoeun.jikbangcopy_20200531.datas
 
 import java.lang.Math.abs
 import java.text.DecimalFormat
+import java.text.NumberFormat
+import java.util.*
 
 class Room(val price:Int, val address:String, val floor:Int ,val description:String) {
 
@@ -24,16 +26,11 @@ class Room(val price:Int, val address:String, val floor:Int ,val description:Str
 
         if (this.price >= 10000)
         {
-            return "${this.price/10000}억${makeCommaNumber(this.price%10000)}"
+            return "${this.price/10000}억${NumberFormat.getInstance(Locale.KOREA).format(this.price%10000)}"
         } else {
-            return makeCommaNumber(this.price)
+            return NumberFormat.getInstance(Locale.KOREA).format(this.price)
         }
 
-    }
-
-    fun makeCommaNumber(input:Int): String{
-        val formatter = DecimalFormat("###,###")
-        return formatter.format(input)
     }
 
 }
