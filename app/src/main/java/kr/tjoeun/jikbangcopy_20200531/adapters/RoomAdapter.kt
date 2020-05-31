@@ -30,7 +30,7 @@ class RoomAdapter(context: Context, resId:Int , list:List<Room>) : ArrayAdapter<
         val addressTxt = row.findViewById<TextView>(R.id.addressTxt)
         val memoTxt = row.findViewById<TextView>(R.id.memoTxt)
 
-        priceTxt.text = data.price.toString()
+        priceTxt.text = data.getFommattedPrice()
 
         addressTxt.text = "${data.address}, ${data.getFomattedFloor()}"
         memoTxt.text = data.description
