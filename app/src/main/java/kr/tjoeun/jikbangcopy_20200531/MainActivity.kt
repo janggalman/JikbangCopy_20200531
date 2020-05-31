@@ -1,7 +1,9 @@
 package kr.tjoeun.jikbangcopy_20200531
 
+import android.icu.text.Transliterator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 import kr.tjoeun.jikbangcopy_20200531.adapters.RoomAdapter
 import kr.tjoeun.jikbangcopy_20200531.datas.BaseActivity
@@ -21,6 +23,7 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
 
     }
 
